@@ -62,6 +62,8 @@ header nav a{
 
 }
 
+
+/*teste do form----------------------------------------------------------------------------------*/
 .sobre img{
     filter: drop-shadow(0 0 20px #fff);
 }
@@ -80,15 +82,128 @@ header nav a{
 
 }
 
+.sobre .a1{
+    color: #a0cddb;
+    filter: drop-shadow(0 0 2px #06789b);
+}
+
 .contato{
     background-image: linear-gradient(to top right,#041a29,#000);
     height: 400px;
 }
 
+
+section.formulario{
+    padding: 180px 4%;
+}
+
+.formulario{
+    align-items: center;
+    height: 600px;
+    background-image: linear-gradient(to top right,#041a29,#000);
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;    
+
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color:#56565888;
+    border: 0;
+    outline: 0;
+    padding: 30px 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+
+form textarea{
+    resize: none;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+form .btn-enviar input{
+    width: 40%;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+
+}
+
+form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 4px;
+    transform: scale(1.05);
+}
+
+.interface{
+    width: 50%;
+    color: #fff;
+    text-align: center;
+}
+
+.interface h1{
+    height: 70px;
+}
+
+.interface #nome, #email{
+    height: 50px;
+}
+
+.interface #mensagem{
+    height: 200px;
+}
+
+.caixaproj{
+    background-color: #1e1f21;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nproj{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #1e1f21;
+    color: #b7b7b7;
+}
+/*teste do form----------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
 .jobs{
     /*background-image: linear-gradient(to top left,#000,#041a29);*/
     width: 100%;
     padding: 60px 4%;
+    height: 110vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -103,7 +218,7 @@ header nav a{
     max-width: 100%;
     display: flex;
     justify-content: center;
-    width: 350px;
+    width: 300px;
     height: 300px;
     position: relative;
     /*background-color: #00c0fa;*/
@@ -179,31 +294,105 @@ header nav a{
 }
 
 
+.rodape{
+    background-image: linear-gradient(to top right,#0a3857,#000);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    max-width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+}
 
+.rodape img{
+    height: 30px;
+    max-width: 100%;
+}
 
-
-@media screen and (max-width: 850px){
-
-    /*header*/
-    a{
-        display: none;
-    }
-
-    .sobre{
-        flex-direction: column;
-
-    }
-
-    .topo img{
-        max-width: 100%;
-        height: 15%;
-
-    }
-
-    .trabalho .img-box {
-        width: 150px;
-        height: auto; 
-    }
-
+.rodape1{
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
 
 }
+
+
+.rodape img:hover{
+    filter: drop-shadow(0 0 4px #fff);
+}
+
+.interface{
+    width: 100%;
+}
+
+
+
+    @media screen and (max-width: 850px){
+
+        /*header*/
+
+        header{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            text-align: center;
+        }
+
+        header nav{
+            text-align: center;
+        }
+
+        header nav a{
+            /*display: none;*/
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 15px 0;
+            text-align: center;
+        }
+
+        header.scroll{
+            background-image: linear-gradient(to top left,#0001,#000);
+            padding: 10px 4%;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            z-index: 10;
+        }
+
+        .sobre{
+            flex-direction: column;
+        }
+
+        .topo img{
+            max-width: 100%;
+            height: 15%;
+
+        }
+
+        .trabalho .img-box {
+            width: 150px;
+            height: auto; 
+        }
+
+        .jobs{
+            height: 160vh;
+        }
+
+        .formulario{
+            height: 70vh;
+            width: 100%;
+        }
+
+        h1{
+            font-size: 22px;
+        }
+
+        
+
+    }

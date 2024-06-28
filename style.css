@@ -5,14 +5,15 @@
 }
 
 header{
-    background-image: transparent;
+    background-image: linear-gradient(to top left,#0001,#000);
     display: flex;
     justify-content: space-between;
     position: fixed;
     width: 100%;
     padding: 60px 4%;
     align-items: center;
-
+    padding: 16px;
+    z-index: 1;
 }
 
 header.scroll{
@@ -332,28 +333,67 @@ button:hover, form .btn-enviar input:hover{
 
 
 
-    @media screen and (max-width: 850px){
+.nav-list a{
+    text-decoration: none; 
+    color: #fff;  
+    padding-block: 16px;
+}
 
-        /*header*/
+header ul{
+   display: flex;
+   flex-direction: row;
+   gap: 32px;
+   align-items: center;
+   list-style: none;
+}
 
-        header{
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            width: 100%;
-            text-align: center;
+.hamb{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamb::before, .hamb::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 5px;
+
+}
+
+
+
+
+    @media screen and (max-width: 750px){
+
+        .hamb{
+            display: block;
         }
 
-        header nav{
-            text-align: center;
+        .nav-list{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vh;
+            height: 100vh;
+            background-color: #1e1f21;
+            clip-path: circle(100px at 90% -15%);
+            transition: 1s ease-in-out;
+            
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 0;
+            pointer-events: none;
         }
 
-        header nav a{
-            /*display: none;*/
-            display: flex;
-            flex-direction: column;
-            margin: 0 0 15px 0;
-            text-align: center;
+        .nav.ativo .nav-list {
+            clip-path: circle(1500px at 90% -15%);
+            pointer-events: all;
         }
 
         header.scroll{

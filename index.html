@@ -8,17 +8,33 @@
 </head>
 <body>
     
-    <header id="header">
-        <div><img src="matheuslogobranca1.png"></div>
+    <header>
+        
+            <a href="#topo"><img src="matheuslogobranca1.png"></a>
+
+            <button class="hamb"></button>
+            
+            <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#topo">HOME</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#trabalho">TRABALHOS</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+                <li><a href="https://www.instagram.com/matheusbarrossantana/?hl=pt-br"> <img src="insta1.png"> </a></li>
+            </ul>
+        </nav>
+    <!--
+        <div></div>
 
         <nav> 
-            <a href="#topo">HOME</a>
-            <a href="#sobre">SOBRE</a>
-            <a href="#trabalho">TRABALHOS</a>
-            <a href="#contato">CONTATO</a>
+            
+            
+            
+            
         </nav>
 
-        <a href="https://www.instagram.com/matheusbarrossantana/?hl=pt-br"> <img src="insta1.png"> </a>
+        
+    -->
     </header>
     
     <div class="topo" id="topo">
@@ -119,7 +135,7 @@
             <form action="">
                 <input type="text" name="nome" id="nome" placeholder="Seu nome:" required> <!--placeholder deixa o texto dentro da caixa de input, o required, transorma a caixa de input obrigatoria-->
                 <input type="email" name="email" id="email" placeholder="Seu e-mail:" required> <!--placeholder deixa o texto dentro da caixa de input-->
-                <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
+                <textarea name="mensage" id="mensage" placeholder="Sua mensagem" required></textarea>
                 <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
             </form>
     
